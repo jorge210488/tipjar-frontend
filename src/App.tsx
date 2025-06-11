@@ -72,7 +72,7 @@ function App() {
 
       setTips(tipsArray);
     } catch (err) {
-      console.error("Error loading tips:", err);
+      console.error("Error cargando las propinas:", err);
     }
   };
 
@@ -98,33 +98,33 @@ function App() {
         value: ethers.parseEther(tipAmount),
       });
       await tx.wait();
-      alert("Tip sent!");
+      alert("Propina enviada!");
       getBalance();
       getTips();
     } catch (err) {
       console.error(err);
-      alert("Transaction failed");
+      alert("Transacción fallida");
     }
   };
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial" }}>
       <h1>🎁 TipJar</h1>
-      <p>Contract balance: {contractBalance} ETH</p>
+      <p>Balance del Contrato: {contractBalance} ETH</p>
 
       <div style={{ marginTop: "1rem" }}>
-        <label>Message:</label>
+        <label>Mensaje:</label>
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Your message"
+          placeholder="Tu mensaje"
           style={{ marginLeft: "1rem" }}
         />
       </div>
 
       <div style={{ marginTop: "1rem" }}>
-        <label>Tip amount (ETH):</label>
+        <label>Monto de la propina (ETH):</label>
         <input
           type="text"
           value={tipAmount}
@@ -137,26 +137,26 @@ function App() {
         onClick={sendTip}
         style={{ marginTop: "1rem", padding: "0.5rem 1rem" }}
       >
-        Send Tip
+        Enviar propina
       </button>
 
       <p style={{ marginTop: "2rem" }}>
-        Connect your wallet (Metamask) to interact.
+        Conecta tu billetera (Metamask) para interactuar.
       </p>
 
       {/* Mostrar lista de propinas */}
       <div style={{ marginTop: "2rem" }}>
-        <h2>💌 Tips received:</h2>
+        <h2>💌 Propinas recibidas:</h2>
         {tips.length === 0 ? (
           <p>Sin propinas aún!</p>
         ) : (
           <ul>
             {tips.map((tip, index) => (
               <li key={index} style={{ marginBottom: "1rem" }}>
-                <strong>From:</strong> {tip.from} <br />
-                <strong>Amount:</strong> {tip.amount} ETH <br />
-                <strong>Message:</strong> {tip.message} <br />
-                <strong>Date:</strong>{" "}
+                <strong>De:</strong> {tip.from} <br />
+                <strong>Monto:</strong> {tip.amount} ETH <br />
+                <strong>Mensaje:</strong> {tip.message} <br />
+                <strong>Fecha:</strong>{" "}
                 {new Date(tip.timestamp * 1000).toLocaleString()}
               </li>
             ))}
