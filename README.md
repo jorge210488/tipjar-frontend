@@ -1,54 +1,97 @@
-# React + TypeScript + Vite
+# 📝 TipJar UI - Interfaz React para Contrato de Propinas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Descripción
 
-Currently, two official plugins are available:
+Este proyecto implementa una **interfaz en React** para interactuar con el contrato inteligente **TipJar** desplegado en la testnet **Sepolia**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Permite a los usuarios:
 
-## Expanding the ESLint configuration
+- Enviar propinas en ETH con un mensaje.
+- Ver la lista de propinas recibidas (Bonus).
+- Ver el balance actual del contrato.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Tecnologías
+
+- React + Vite
+- TypeScript
+- Ethers.js
+- Sepolia testnet
+- Metamask
+
+---
+
+## 🛠️ Instalación
+
+1️⃣ Clona el repositorio:
+
+```bash
+git clone https://github.com/jorge210488/tipjar-frontend.git
+cd tipjar-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2️⃣ Instala dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3️⃣ Crea un archivo `.env` en la raíz del proyecto con la siguiente estructura:
+
+```env
+VITE_CONTRACT_ADDRESS=TU_CONTRACT_ADDRESS
+```
+
+**IMPORTANTE:** no subas el `.env` al repositorio público.
+
+---
+
+## 📦 Scripts disponibles
+
+### 👉 Iniciar la app en desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en:
+
+```
+http://localhost:5173
+```
+
+### 👉 Build de producción:
+
+```bash
+npm run build
+```
+
+### 👉 Previsualizar build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🚀 Bonus implementado
+
+- ✅ UI para enviar propinas en ETH con mensaje.
+- ✅ Mostrar lista de propinas (`Tipper`, `amount`, `message`, `timestamp`).
+- ✅ Leer el balance actual del contrato.
+
+---
+
+## 📄 Estado actual
+
+✅ UI funcionando y conectada al contrato TipJar en Sepolia.
+
+✅ Compatible con Metamask.
+
+---
+
+## 💻 Autor
+
+- \[Jorge Martínez]
+- [Tu GitHub](https://github.com/jorge210488)
