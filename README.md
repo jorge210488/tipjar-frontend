@@ -9,6 +9,8 @@ Permite a los usuarios:
 - Enviar propinas en ETH con un mensaje.
 - Ver la lista de propinas recibidas (Bonus).
 - Ver el balance actual del contrato.
+- Cambiar de cuenta en Metamask y ver la cuenta conectada
+- Ver feedback visual con **spinner de loading** durante transaccion
 
 ---
 
@@ -80,6 +82,9 @@ npm run preview
 - ✅ UI para enviar propinas en ETH con mensaje.
 - ✅ Mostrar lista de propinas (`Tipper`, `amount`, `message`, `timestamp`).
 - ✅ Leer el balance actual del contrato.
+- ✅ Soporte para cambio de cuenta en Metamask con actualización en la UI.
+- ✅ Spinner de loading durante las transacciones.
+- ✅ Botones bloqueados mientras se procesa una transacción.
 
 ---
 
