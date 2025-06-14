@@ -98,5 +98,5 @@ npm run preview
 
 ## 💻 Autor
 
-- \[Jorge Martínez]
-- [Tu GitHub](https://github.com/jorge210488)
+- **Jorge Martínez**
+- https://github.com/jorge210488
